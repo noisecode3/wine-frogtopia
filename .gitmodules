@@ -1,0 +1,6 @@
+[submodule "wine-9.4/wine"]
+	path = wine-9.4/wine
+	url = https://github.com/wine-mirror/wine.git
+[submodule "wine-9.4/wine-staging"]
+	path = wine-9.4/wine-staging
+	url = https://github.com/wine-staging/wine-staging.git

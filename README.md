@@ -1,8 +1,8 @@
-# frogtopia-wine
+# FrogTopia
 
-Frogtopia-Wine is a custom build of Wine designed to improve the audio experience for gaming on Linux. Based on the powerful Wine-TKG project, Frogtopia-Wine integrates my own custom audio patches that aim to fix issues such as latency, crackling, and broken multi-channel (5.1/7.1) audio in various Windows games.
+Frogtopia is a custom build of Wine designed to improve the audio experience for gaming on Linux. Based on the powerful Wine-TKG project, Frogtopia integrates my own custom audio patches that aim to fix issues such as latency, crackling, and broken multi-channel (5.1/7.1) audio in various Windows games.
 
-## Why Frogtopia-Wine?
+## Why FrogTopia?
 
 Linux gaming via Wine is rapidly improving, but audio problems have been a long-standing issue for gamers. Frogtopia-Wine specifically targets these issues by:
 
@@ -29,7 +29,7 @@ To use Frogtopia-Wine, follow these steps:
 
 ### Clone the repository
 
-    git clone https://github.com/yourusername/frogtopia-wine.git
+    git clone --no-recurse-submodules https://github.com/noisecode3/wine-frogtopia.git
     cd frogtopia-wine
 
 ### Install Dependencies: You will need the standard build dependencies for Wine. On Debian/Ubuntu
@@ -38,6 +38,7 @@ To use Frogtopia-Wine, follow these steps:
 
 ## Build Frogtopia-Wine
 
+    cd wine-9.4
     ./build.sh
 
 This will compile Frogtopia-Wine with the custom audio patches applied.
