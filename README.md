@@ -27,25 +27,26 @@ Linux gaming via Wine is rapidly improving, but audio problems have been a long-
 
 To use Frogtopia-Wine, follow these steps:
 
-### Clone the repository:
+### Clone the repository
+
     git clone https://github.com/yourusername/frogtopia-wine.git
     cd frogtopia-wine
 
-### Install Dependencies: You will need the standard build dependencies for Wine. On Debian/Ubuntu:
+### Install Dependencies: You will need the standard build dependencies for Wine. On Debian/Ubuntu
 
     sudo apt install build-essential libasound2-dev libpulse-dev libpipewire-0.3-dev
 
-## Build Frogtopia-Wine:
+## Build Frogtopia-Wine
 
     ./build.sh
 
 This will compile Frogtopia-Wine with the custom audio patches applied.
 
-### Set Frogtopia-Wine as your default Wine version:
+### Set Frogtopia-Wine as your default Wine version
 
     export PATH=/path/to/frogtopia-wine/bin:$PATH
 
-Run your games with Frogtopia-Wine: Simply launch your game using Wine as you normally would:
+Run your games with Frogtopia-Wine: Simply launch your game using Wine as you normally would
 
     wine your-game.exe
 
@@ -54,4 +55,5 @@ Run your games with Frogtopia-Wine: Simply launch your game using Wine as you no
 Contributions are welcome! If you encounter any issues or have ideas for improving Frogtopia-Wine, feel free to submit a pull request or open an issue.
 
 ## License
+
 Frogtopia-Wine is distributed under the GNU Lesser General Public License.
