@@ -12,12 +12,21 @@ _git_download() {
       echo "Did not end up in the right repository, we got $_repo"
       exit 1
     fi
+    if [[ "$(git describe --tags)" != "v9.4.1" ]]; then
+      echo "Did not get the right tag, we should be on v9.4.1"
+      exit 1
+    fi
 
+v9.4.1
     # Wine checkout
     cd ../wine || exit 1
     _repo="$(git config --get remote.origin.url)"
     if [[ "${_winesrctarget}" != "$_repo" ]]; then
       echo "Did not end up in the right repository, we got $_repo"
+      exit 1
+    fi
+    if [[ "$(git describe --tags)" != "wine-9.4" ]]; then
+      echo "Did not get the right tag, we should be on wine-9.4"
       exit 1
     fi
 }
@@ -51,8 +60,9 @@ _build()
         --with-opengl \
         --program-prefix= \
         --program-suffix= \
+        --disable-tests \
         --build="x86_64"
-    make
+    make -j"$(nproc)"
     cd ..
     mkdir wine32
     cd wine32 || exit 1
@@ -73,8 +83,9 @@ _build()
         --with-opengl \
         --program-prefix= \
         --program-suffix= \
+        --disable-tests \
         --build="x86_64"
-    make
+    make -j"$(nproc)"
 }
 
 _git_download
